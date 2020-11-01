@@ -3,8 +3,78 @@ html {
 }
 
 body * {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #444;
+}
+
+/* common */
+.body__container {
+    height: 100vh;
+    background: #002366;
+}
+
+[class^="col-"] {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1rem .5rem;
+    text-align: center;
+    border: .1rem solid #999;
+    border-radius: .5rem;
+}
+
+/* GRID */
+.container {
+    width: 96rem;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container:hover::after {
+    content: '';
+	display: block;
+	width: 96rem;
+	min-height: 100%;
+	background-image: linear-gradient(to right, transparent 20%, rgba(133, 166, 199, 0.2) 20%, rgba(88, 116, 145, 0.2) 80%, transparent 80%);
+	background-size: 8rem 1rem;
+	background-repeat: repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* HEADER */
+header {
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-bottom: .2rem solid #999;
+}
+
+header h1 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #fff;
 }
